@@ -42,7 +42,12 @@
 				var headlineText = results[i].headline.main;
 				articleHeader.append(articleNum, headlineText)
 				if (results[i].byline != null) {
-					var author = $('<p>').text(results[i].byline.person[0].firstname + " " + results[i].byline.person[0].lastname);
+					if (results[i].byline.person[0] != null) {
+						var author = $('<p>').text(results[i].byline.person[0].firstname + " " + results[i].byline.person[0].lastname);
+					}
+					else {
+						var author = $('<p>').text(results[i].byline.organization);
+					}
 				}
 				else {
 					var author = $('<p>No author</p>');
