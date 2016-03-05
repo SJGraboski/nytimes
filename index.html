@@ -10,26 +10,36 @@
 </head>
 
 <body>
+    <div id="wrapper">
+        <div class="container">
 
-<button id="search"></button>
-
-            <div class="jumbotron">
+            <div class="jumbotron" align="center" id="title">
               <h1>NYTimes Search</h1>
             </div>
 
             <div class="panel panel-default" align="left">
               <div class="panel-heading">Search Parameters</div>
                 <div class="panel-body">
-                  <p>...</p>
             </div>
                   <p class="input-titles" > Search Term</p>
-                  <input  size="185"id="search-term"></input><br>
+                  <input  size="100"id="search-term"></input><br>
                   <p class="input-titles" > Number of Records to Retrieve</p>
-                  <input  size="185" id="number-responses"></input><br>
+                  <input  size="100" id="number-responses"></input><br>
                   <p class="input-titles" > Start Year (Optional)</p>
-                  <input  size="185" id="start-year"></input><br>
+                  <input  size="100" id="start-year"></input><br>
                   <p class="input-titles" > End Year (Optional)</p>
-                  <input  size="185" id="end-year"></input>
+                  <input  size="100" id="end-year"></input>
+                  <br>
+                  <button id="search">Search</button>
+
+                  <button id="clear-response">Clear Response</button>
+            </div>
+
+            <div class="panel panel-default" align="left">
+              <div class="panel-heading">Top Articles</div>
+                <div class="panel-body" class="articleArea">
+                </div>
+              </div>
             </div>
       </div>
 </div>
