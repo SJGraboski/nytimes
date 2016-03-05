@@ -26,10 +26,13 @@
 				var articleNum = $('<span>').text(i+1);
 				var headlineText = results[i].headline.main;
 				articleHeader.append(articleNum, headlineText)
-				var author = 
-				var section
-				var datePublished
-				var articleLink
+				var author = $('<p>').text(results[i].byline.person.firstname + results[i].byline.person.lastname);
+				var section = $('<p>').text(results[i].section_name);
+				var datePublished = $('<p>').text(results[i].pub_date);
+				var articleLink = $('<p>').text(results[i].web_url);
+
+				articleDiv.append(articleHeader, author, section, datePublished, articleLink);
+				$("#article-area").append(articleDiv);
 			}
 			
 
@@ -39,5 +42,7 @@
 	 }
 
 
-
+$("#clear-response").on('click', function() {
+	$("#article-area").empty();
+}
 
