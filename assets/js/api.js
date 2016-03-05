@@ -7,8 +7,20 @@
 	var endYear = $("#end-year").val().trim();
 
 	var queryURL = "http://api.nytimes.com/svc/search/v2/articlesearch.json?q=" + 
-		searchTerm + "&begin_date=" + startYear + "0101&end_date=" + endYear + 
-		"1231&page=0&api-key=4d967c5d0ae05680f9bd295982d1e0cd%3A5%3A74629249";
+		searchTerm;
+	
+	if(startYear) {
+		queryURL += "&begin_date=" + startYear + "0101";
+	}  
+
+	if (endYear) {
+		queryURL += "&end_date=" + endYear + "1231";
+	}
+
+	var page_and_apiKey = "&page=0&api-key=4d967c5d0ae05680f9bd295982d1e0cd%3A5%3A74629249";
+		
+	queryURL += page_and_apiKey;
+
 	console.log(queryURL);
 
 	$.ajax({
@@ -16,6 +28,9 @@
 		method: 'GET'
 			})
 		.done(function(search) {
+
+			// empty article area on every search
+			$("#article-area").empty()
 
 			var results = search.response.docs;
 			console.log(results);
