@@ -33,13 +33,14 @@
 
 				articleDiv.append(articleHeader, author, section, datePublished, articleLink);
 				$("#article-area").append(articleDiv);
+
 			}
 			
 
     	});
 
 
-	 }
+	 });
 
 
 $("#clear-response").on('click', function() {
