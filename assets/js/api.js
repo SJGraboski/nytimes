@@ -25,7 +25,10 @@
 				var articleHeader = $('<h3>');
 				var articleNum = $('<span>').text(i+1);
 				var headlineText = results[i].headline.main;
-				articleHeader.append(articleNum, headlineText)
+				articleHeader.append(articleNum, headlineText);
+
+
+
 				var author = 
 				var section
 				var datePublished
