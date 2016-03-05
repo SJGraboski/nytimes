@@ -66,3 +66,26 @@ h6 { font-size: 0.7em; }
 	color: #ffffff;
 }
 
+
+.input-titles {
+	padding: 5px 5px 5px 0;
+}
+
+button {
+	margin-top: 10px;
+	background-color: #95a5a6;
+	color: #ffffff;
+	padding: 15px;
+}
+
+.panel {
+	margin-top: 20px;
+}
+
+.panel-body {
+	border-style: solid;
+	border-width: 1px;
+	border-color: black;
+	border-top: 1px;
+}
+
