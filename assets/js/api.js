@@ -37,8 +37,8 @@
 			for(i=0;i<numRecord;i++) {
 				var articleDiv = $('<div class="item">');
 
-				var articleHeader = $('<h3>');
-				var articleNum = $('<span>').text(i+1);
+				var articleHeader = $('<h2>');
+				var articleNum = $('<span class="article-number">').text(i+1);
 				var headlineText = results[i].headline.main;
 				articleHeader.append(articleNum, headlineText)
 				if (results[i].byline != null) {

@@ -1,54 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
+    
 <head>
-    <title>Video Game Trivia</title>
+    <title>NYTimes Search</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Chela+One" rel="stylesheet" type="text/css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
     <link href="assets/css/style.css" rel="stylesheet">
 </head>
 
 <body>
+    
     <div id="wrapper">
         <div class="container">
 
-            <div class="jumbotron" align="center" id="title">
-              <h1>NYTimes Search</h1>
+            <div class="jumbotron title" align="center" id="page-title">
+              <h1 id="title-text"><i class="fa fa-newspaper-o"></i> New York Times Search</h1>
             </div>
 
             <div class="panel panel-default" align="left">
-              <div class="panel-heading" id="title">Search Parameters</div>
-                <div class="panel-body">
-
-
+              <div class="panel-heading subTitle" id="search-title"><i class="fa fa-list-alt"></i> Search Parameters</div>
+                <div class="panel-body" id="search-area">
                   <p class="input-titles">Search Term:</p>
-                  <input  size="100"id="search-term"></input><br>
+                  <div class="input-group input-group-md inputBox">
+                    <input id="search-term" class="form-control" placeholder="" aria-describedby="sizing-addon1">
+                  </div>
+                  
                   <p class="input-titles">Number of Records to Retrieve:</p>
-                  <input  size="100" id="number-responses"></input><br>
+                  <div class="input-group input-group-md inputBox">
+                    <input id="number-responses" class="form-control" placeholder="1 - 10" aria-describedby="sizing-addon1">
+                  </div>
                   <p class="input-titles">Start Year (Optional):</p>
-                  <input  size="100" id="start-year"></input><br>
+                  <div class="input-group input-group-md inputBox">
+                    <input class="form-control" id="start-year" placeholder="e.g. 1990" aria-describedby="sizing-addon1">
+                  </div>
                   <p class="input-titles">End Year (Optional):</p>
-                  <input  size="100" id="end-year"></input>
+                  <div class="input-group input-group-md inputBox">
+                    <input class="form-control" id="end-year" placeholder="e.g. 1990" aria-describedby="sizing-addon1">
+                  </div>
                   <br>
-                  <button id="search">Search</button>
-
-                  <button id="clear-response">Clear Response</button>
+                  
+                  <button type="button" class="btn btn-default" id="search"><i class="fa fa-search-plus"></i> Search</button>
+                  
+                  <button type="button" class="btn btn-default" id="clear-response"><i class="fa fa-undo"></i> Clear Response</button>
+                </div>
             </div>
+
+            
 
             <div class="panel panel-default" align="left">
-              <div class="panel-heading" id="title">Top Articles</div>
-                <div class="panel-body" id="article-area">
-                </div>
+              <div class="panel-heading subTitle" id="result-title">
+                  <i class="fa fa-table"></i> Top Articles
               </div>
+               <div id="article-area"> <!-- results of API request get put here --> </div>
             </div>
-      
-
-         
-
-      </div>
-</div>
-  
+   
+        </div>
+    </div>
   
     <script src="https://code.jquery.com/jquery-2.2.0.js" type="text/javascript"></script>
     <script src="assets/js/api.js" type="text/javascript"></script>
