@@ -6,7 +6,7 @@
 	var startYear = $("#start-year").val().trim();
 	var endYear = $("#end-year").val().trim();
 
-	var queryURL = "http://api.nytimes.com/svc/search/v2/articlesearch.json?q=" + 
+	var queryURL = "https://api.nytimes.com/svc/search/v2/articlesearch.json?q=" + 
 		searchTerm;
 	
 	if(startYear) {
